@@ -4,7 +4,7 @@
 // MODEL OR ENTITY
 namespace InstantLoan.DAL.Models
 {
-    public class User
+    public class Client
     {
         public int Id { get; set; }
 
@@ -20,7 +20,7 @@ namespace InstantLoan.DAL.Models
         [Required]
         public string Address { get; set; }
         [Required]
-        public int Age { get; set; }
+        public DateTime Birthday { get; set; }
 
 
     }

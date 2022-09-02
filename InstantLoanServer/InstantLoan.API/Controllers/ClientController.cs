@@ -8,24 +8,24 @@ namespace InstantLoan.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class ClientController : ControllerBase
     {
 
 
-        private readonly IUserRepository _userService;
+        private readonly IClientRepository _clientService;
 
-        public UserController(IUserRepository userService)
+        public ClientController(IClientRepository clientService)
         {
-            _userService = userService;
+            _clientService = clientService;
         }
 
-        // GET: api/<UsersController>
+        // GET: api/<ClientsController>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
             {
-                var result = await _userService.GetUsers();
+                var result = await _clientService.GetClients();
                 return Ok(result);
             }
             catch (Exception ex)
@@ -34,16 +34,16 @@ namespace InstantLoan.API.Controllers
             }
         }
 
-        // GET api/<UsersController>/5
+        // GET api/<ClientsController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             try
             {
-                var userFound = await _userService.GetUserById(id);
-                if (userFound == null) return NotFound();
+                var clientFound = await _clientService.GetClientById(id);
+                if (clientFound == null) return NotFound();
 
-                return Ok(userFound);
+                return Ok(clientFound);
             }
             catch (Exception ex)
             {
@@ -51,14 +51,14 @@ namespace InstantLoan.API.Controllers
             }
         }
 
-        // POST api/<UsersController>
+        // POST api/<ClientsController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] User dataUser)
+        public async Task<IActionResult> Post([FromBody] Client dataClient)
         {
             try
             {
-                var resultUser = await _userService.PostUser(dataUser);
-                return Ok(resultUser);
+                var resultClient = await _clientService.PostClient(dataClient);
+                return Ok(resultClient);
             }
             catch (Exception ex)
             {
@@ -66,14 +66,14 @@ namespace InstantLoan.API.Controllers
             }
         }
 
-        // PUT api/<UsersController>/5
+        // PUT api/<ClientsController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] User dataUser)
+        public async Task<IActionResult> Put(int id, [FromBody] Client dataClient)
         {
             try
             {
-                if (id != dataUser.Id) return NotFound();
-                await _userService.UpdateUser(id, dataUser);
+                if (id != dataClient.Id) return NotFound();
+                await _clientService.UpdateClient(id, dataClient);
                 return Ok(new { message = "Data updated successfuly." });
             }
             catch (Exception ex)
@@ -83,13 +83,13 @@ namespace InstantLoan.API.Controllers
 
         }
 
-        // DELETE api/<UsersController>/5
+        // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                var result = await _userService.DeleteUserById(id);
+                var result = await _clientService.DeleteClientById(id);
                 if (result == "NOT_FOUND") return NotFound();
                 return Ok(new { message = "Data deleted successfuly." });
             }

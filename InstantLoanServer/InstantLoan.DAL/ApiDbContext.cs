@@ -8,6 +8,6 @@ namespace InstantLoan.DAL
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options) { }
 
         // Mapping Entities (Models)
-        public DbSet<User> User { get; set; }
+        public DbSet<Client> Client { get; set; }
     }
 }

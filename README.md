@@ -45,7 +45,7 @@ Click derecho en la capa: (Company.API) > Set as Startup Project
 
 Imagen de sección (1) paso (05)
 
-![image](https://user-images.githubusercontent.com/23192401/181151719-c600f5ce-3e7e-4a60-9140-dd50f071c9c1.png)
+![image](https://client-images.githubusercontent.com/23192401/181151719-c600f5ce-3e7e-4a60-9140-dd50f071c9c1.png)
 
 Imagen de sección (1) paso (06)
 
@@ -71,9 +71,9 @@ y en la capa *.BL y *.DAL eliminamos el fichero Class1.cs:
     
 
 04. En la capa de accesos a datos (Company.DAL), en la carpeta Models click derecho
-    añadir clase y creamos la clase User.cs:
+    añadir clase y creamos la clase Client.cs:
     
-    add > class > Code > Class → (User.cs)
+    add > class > Code > Class → (Client.cs)
 
 
     En la capa de accesos a datos (Company.DAL), en la raíz (capa) click derecho
@@ -83,21 +83,21 @@ y en la capa *.BL y *.DAL eliminamos el fichero Class1.cs:
 
     
 05. En la capa de negocio (Company.BL), en la carpeta Repositories click derecho
-    añadir clase, interfaz y creamos la interfaz IUserRepository.cs:
+    añadir clase, interfaz y creamos la interfaz IClientRepository.cs:
 
-    add > class > Code > Interface → (IUserRepository.cs)
+    add > class > Code > Interface → (IClientRepository.cs)
     
     
     En la capa de negocio (Company.BL), en la carpeta ReposServices click derecho
-    añadir clase y creamos la clase UserService.cs:
+    añadir clase y creamos la clase ClientService.cs:
 
-    add > class > Code > Class → (UserService.cs)
+    add > class > Code > Class → (ClientService.cs)
 
 
 07. En la capa de prensentación (Company.API), en la carpeta Controllers click derecho
-    añadir controller y creamos el controlador UserController.cs:
+    añadir controller y creamos el controlador ClientController.cs:
 
-    add > controller > API > API Controller with read/write actions → (UserController.cs)
+    add > controller > API > API Controller with read/write actions → (ClientController.cs)
 
 
 ```

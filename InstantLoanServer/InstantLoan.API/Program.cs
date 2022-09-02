@@ -32,7 +32,7 @@ builder.Services.AddCors(options => options.AddPolicy("AllowWebApp",
 
 
 // INYECCI�N DE DEPENDENCIAS * (Agregar database connection)
-builder.Services.AddTransient<IUserRepository, UserService>();
+builder.Services.AddTransient<IClientRepository, ClientService>();
 
 // CONVERTIR RUTAS EN MIN�SCULAS
 builder.Services.AddRouting(routing => routing.LowercaseUrls = true);

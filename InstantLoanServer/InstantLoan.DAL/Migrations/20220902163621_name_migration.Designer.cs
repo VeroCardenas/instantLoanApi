@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InstantLoan.DAL.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20220728051730_v1.0.0")]
-    partial class v100
+    [Migration("20220902163621_name_migration")]
+    partial class name_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
